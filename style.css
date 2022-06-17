@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 95vh;
+}
+
+.item1{
+    grid-area: form-text;
+    color: #fff;
+    padding: 10% 15%;
+    /* background-color: rgba(124, 183, 163, 0.5); */
+}
+.item2{
+    grid-area: main-form;
+    /* background-color: rgba(85, 85, 169, 0.5); */
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+            'form-text main-form';
+    background:url('images/bg-intro-desktop.png') rgb(183, 121, 132);
+    width: 100%;
+    height: 100vh;
+    gap: 5px;
+    padding: 5% 10%;
+}
+h2{
+    font-weight: 700;
+    font-size: 2.5rem;
+
+}
+
+.form-title{
+    background-color: hsl(248, 32%, 49%) ;
+    border-radius: 5px;
+    padding: 15px 10px;
+    color: #fff;
+    text-align: center;
+}
+
+form div:last-of-type{
+    border: none;
+    padding: 0;
+}
+
+strong{
+    font-weight: 600;
+}
+
+input{
+    color: hsl(249, 10%, 26%);
+    border: #fff;
+    width: 80%;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: #fff;
+    outline: none;
+}
+
+form{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5%;
+    margin-top: 5%;
+}
+
+.form-button, .input-field{
+    border: 1px solid hsl(246, 25%, 77%);
+    border-radius: 5px;
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 5px 10px;
+}
+
+.input-field:active, .input-field:hover{
+    border: 2px solid hsl(246, 25%, 77%);
+}
+.input-field:empty, .input-field:invalid{
+    border: 2px solid hsl(0, 100%, 74%);
+
+}
+
+button{
+    background-color: hsl(154, 59%, 51%);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0px;
+    width: 100%;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+span{
+    text-align: center;
+    margin-left: 10px;
+    font-size: 0.55rem;
+}
+span > a {
+    text-decoration: none;
+    color: hsl(0, 100%, 74%);
+    font-weight: 400;
+
+}
+
+@media screen and (min-width:375px) and ( max-width:425px){
+
+    .grid-container{
+        display: block;
+        width: 100vw;
+        height: 135vh;
+        padding: 2% 5%;
+
+
+    }
+
+    .item1{
+        /* display: inline-block; */
+        width: 100%;
+        padding: 0% 7%;
+        text-align: center;
+    }
+
+    .form-title{
+        margin-top: 7%;
+    }
+
+    h2{
+        font-size: 2rem;
+        margin: 5% 0;
+    }
+
+    span{
+        font-size: 0.72rem;
+    }
+
+    form{
+        margin-bottom: 5%;
+    }
+}
